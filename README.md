@@ -1,7 +1,6 @@
-# Grupo Leiden · aniversario 21 años + sitio nuevo
+# Grupo Leiden · aniversario 18 años + sitio nuevo
 
-Regalo de Scalo a Grupo Leiden por su aniversario (26-09-2026). Grupo Leiden nació
-en 2005 (lo dice su web), por eso son **21 años**.
+Regalo de Scalo a Grupo Leiden por su aniversario (26-09-2026). Celebramos sus **18 años**, según la corrección del aniversario.
 
 | Página | URL | Archivo |
 |---|---|---|
@@ -10,7 +9,7 @@ en 2005 (lo dice su web), por eso son **21 años**.
 | Sitio actual de ellos (referencia) | https://www.grupoleiden.com | captura en `referencia/sitio-viejo-captura.png` |
 
 **Nunca decir que el sitio actual es feo.** El regalo se presenta como "una versión
-nueva para los próximos 21".
+nueva para los próximos 18".
 
 ## Cómo se publica
 
@@ -25,7 +24,7 @@ No hace falta build: es HTML estático, sin frameworks. Para verlo en local:
 ## Estructura
 
 - `index.html` — saludo. Todo el CSS y JS está adentro del archivo.
-  Secciones: hero (isotipo + 21 que cuenta), línea de tiempo, números, marcas
+  Secciones: hero (isotipo + 18 que cuenta), línea de tiempo, números, marcas
   (cintas de logos), carta del equipo de Scalo, regalo (caja que se abre con
   fuegos artificiales y lleva a `/sitio/`).
 - `sitio/index.html` — sitio nuevo. Secciones: hero, clientes, servicios (se
@@ -34,7 +33,7 @@ No hace falta build: es HTML estático, sin frameworks. Para verlo en local:
 - `img/` — logos de Leiden sacados de su web (`logo-blanco.png`, `isotipo-grande.png`,
   `wordmark.png`, `leidenacademy.png`, `logosalesteam.png`), logos de clientes
   pasados a blanco (`clientes/c1..c14.png`) y las imágenes de preview para
-  WhatsApp (`og.png`, `og-sitio.png`).
+  WhatsApp (`og-18.png`, `og-sitio-18.png`).
 
 ## Marca
 
