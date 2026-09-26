@@ -1,0 +1,34 @@
+name: Deploy a Vercel
+
+# Todo push a main publica en https://leiden-21.vercel.app
+# El proyecto de Vercel vive en la cuenta de Tomás (scope hobby, no admite
+# miembros). Vercel bloquea deploys cuyo autor de commit no tiene acceso a ese
+# scope (TEAM_ACCESS_REQUIRED), así que se borra .git antes de subir y el
+# deploy sale a nombre del token. Mismo esquema que scalo-metodo-docs.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-produccion
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm install -g vercel@latest
+      - name: Quitar la metadata de git
+        run: rm -rf .git
+      - name: Desplegar a producción
+        run: vercel deploy --prod --yes --token="$VERCEL_TOKEN"

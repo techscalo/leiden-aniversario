@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Feliz aniversario, Grupo Leiden</title>
+<meta name="description" content="21 años de Grupo Leiden. Un saludo del equipo de Scalo, con regalo incluido.">
+<meta property="og:title" content="Feliz aniversario, Grupo Leiden">
+<meta property="og:description" content="21 años construyendo marcas. Hay un regalo esperando al final.">
+<meta property="og:image" content="https://leiden-21.vercel.app/img/og.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#040A1C">
+<link rel="icon" href="/img/isotipo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#040A1C;--bg2:#07122B;--ink:#EAF6F8;--mute:#8FA3B8;--teal:#2DD4B4;--cyan:#97F5FF;--blue:#2B7BFF;--orange:#FF5A1F;--line:rgba(151,245,255,.14)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:Sora,system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+#bokeh{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.glow{position:fixed;inset:-20%;z-index:0;pointer-events:none;background:
+ radial-gradient(40% 35% at 25% 20%,rgba(45,212,180,.20),transparent 70%),
+ radial-gradient(45% 40% at 80% 70%,rgba(43,123,255,.18),transparent 70%),
+ radial-gradient(30% 30% at 60% 10%,rgba(151,245,255,.10),transparent 70%);animation:breathe 14s ease-in-out infinite alternate}
+@keyframes breathe{to{transform:translate3d(2%,-3%,0) scale(1.06)}}
+main{position:relative;z-index:1}
+section{position:relative;padding:clamp(80px,14vw,160px) 20px}
+.wrap{max-width:1100px;margin:0 auto}
+.eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--cyan);opacity:.85}
+.grad{background:linear-gradient(100deg,#fff 0%,var(--cyan) 35%,var(--teal) 70%,#fff 100%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+@keyframes shine{to{background-position:-200% 0}}
+
+/* HERO */
+.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 20px 90px}
+.iso{width:min(300px,62vw);clip-path:inset(0 50% 0 50%);opacity:0;filter:drop-shadow(0 0 18px rgba(151,245,255,.55));animation:isoIn 1.6s cubic-bezier(.7,0,.2,1) .2s forwards}
+@keyframes isoIn{60%{opacity:1}to{clip-path:inset(0 0 0 0);opacity:1}}
+.big{font-weight:800;font-size:clamp(150px,40vw,340px);line-height:.8;letter-spacing:-.06em;margin-top:6px;position:relative}
+.big .n{display:inline-block}
+.big small{display:block;font-size:clamp(20px,4.6vw,34px);letter-spacing:.5em;font-weight:300;color:var(--mute);margin-top:18px;padding-left:.5em;-webkit-text-fill-color:var(--mute)}
+.hero h1{font-weight:300;font-size:clamp(28px,6.4vw,58px);line-height:1.12;margin-top:28px;letter-spacing:-.02em}
+.hero h1 b{font-weight:700}
+.w{display:inline-block;opacity:0;transform:translateY(24px);filter:blur(8px);transition:all .9s cubic-bezier(.2,.7,.2,1)}
+.w.on{opacity:1;transform:none;filter:none}
+.hero .sub{color:var(--mute);font-size:clamp(14px,3.6vw,17px);margin-top:18px;max-width:520px;line-height:1.6}
+.cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;font-size:11px;letter-spacing:.3em;color:var(--mute);text-transform:uppercase}
+.cue i{width:1px;height:42px;background:linear-gradient(var(--cyan),transparent);animation:drop 2s ease-in-out infinite;transform-origin:top}
+@keyframes drop{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(40px);filter:blur(10px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1),filter 1s ease}
+.js .rv.in{opacity:1;transform:none;filter:none}
+.d1{transition-delay:.1s!important}.d2{transition-delay:.2s!important}.d3{transition-delay:.3s!important}
+
+/* HISTORIA */
+.h2{font-weight:300;font-size:clamp(32px,6vw,64px);line-height:1.08;letter-spacing:-.03em;margin-top:16px}
+.h2 b{font-weight:700}
+.tl{position:relative;margin-top:64px;padding-left:34px}
+.tl:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:1px;background:var(--line)}
+.tl .bar{position:absolute;left:6px;top:6px;width:1px;height:0;background:linear-gradient(var(--cyan),var(--teal));box-shadow:0 0 12px var(--cyan)}
+.hito{position:relative;padding:0 0 48px}
+.hito:last-child{padding-bottom:0}
+.hito:before{content:"";position:absolute;left:-33px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--bg);border:1px solid var(--cyan);transition:all .6s}
+.hito.in:before{background:var(--cyan);box-shadow:0 0 0 6px rgba(151,245,255,.12),0 0 20px var(--cyan)}
+.hito .y{font-size:13px;letter-spacing:.2em;color:var(--teal);font-weight:600}
+.hito h3{font-size:clamp(20px,3.6vw,28px);font-weight:600;margin-top:8px;letter-spacing:-.01em}
+.hito p{color:var(--mute);line-height:1.65;margin-top:8px;max-width:560px;font-size:15px}
+.hito .marca{height:26px;width:auto;margin-top:14px;opacity:.9}
+.swap{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap}
+.swap s{color:var(--mute);text-decoration-color:var(--orange)}
+
+/* NUMEROS */
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:56px}
+.stat{border:1px solid var(--line);border-radius:22px;padding:26px 20px;background:linear-gradient(160deg,rgba(151,245,255,.06),rgba(255,255,255,.01));backdrop-filter:blur(8px)}
+.stat b{display:block;font-size:clamp(38px,8vw,64px);font-weight:700;letter-spacing:-.04em}
+.stat span{color:var(--mute);font-size:13px;line-height:1.5;display:block;margin-top:6px}
+@media(min-width:820px){.stats{grid-template-columns:repeat(4,1fr)}}
+
+/* MARCAS */
+.marq{overflow:hidden;margin-top:48px;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.track{display:flex;gap:56px;align-items:center;width:max-content;animation:mq 45s linear infinite}
+.track img{height:56px;width:auto;opacity:.7}
+.marq.r .track{animation-direction:reverse;animation-duration:52s}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* CARTA */
+.carta{max-width:760px;margin:0 auto;position:relative;border-radius:30px;padding:clamp(34px,6vw,64px);background:linear-gradient(160deg,rgba(45,212,180,.10),rgba(43,123,255,.06) 60%,rgba(255,255,255,.02));border:1px solid var(--line);overflow:hidden}
+.carta:after{content:"";position:absolute;inset:-1px;border-radius:30px;padding:1px;background:conic-gradient(from var(--a,0deg),transparent 0 70%,var(--cyan) 80%,var(--teal) 90%,transparent);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:spin 6s linear infinite;pointer-events:none}
+@property --a{syntax:"<angle>";inherits:false;initial-value:0deg}
+@keyframes spin{to{--a:360deg}}
+.carta p{font-size:clamp(17px,2.6vw,21px);line-height:1.7;font-weight:300;margin-top:20px}
+.carta p b{font-weight:600;color:#fff}
+.firma{margin-top:34px;display:flex;align-items:center;gap:14px;color:var(--mute);font-size:14px}
+.firma i{width:36px;height:1px;background:var(--cyan)}
+
+/* REGALO */
+.regalo{overflow:hidden;text-align:center;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.stage{margin-top:60px;perspective:900px;height:400px;display:flex;align-items:flex-end;justify-content:center;position:relative;width:100%}
+.gift{position:relative;width:200px;height:170px;margin-bottom:30px;cursor:pointer;transform-style:preserve-3d;transition:transform 1s cubic-bezier(.5,0,.3,1) .5s,opacity .8s .5s;-webkit-tap-highlight-color:transparent;border:0;background:none}
+.gift .box{position:absolute;inset:0;border-radius:10px;background:linear-gradient(145deg,#12306A,#0A1B44 60%,#07122B);box-shadow:inset 0 0 0 1px rgba(151,245,255,.25),0 30px 60px -20px rgba(45,212,180,.45)}
+.gift .box:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:30px;transform:translateX(-50%);background:linear-gradient(90deg,var(--teal),var(--cyan),var(--teal))}
+.gift .lid{position:absolute;left:-12px;right:-12px;top:-38px;height:44px;border-radius:9px;background:linear-gradient(145deg,#1A3F86,#0E2458);box-shadow:inset 0 0 0 1px rgba(151,245,255,.3),0 8px 18px rgba(0,0,0,.4);transition:transform 1s cubic-bezier(.3,1.6,.4,1),opacity .8s .4s;z-index:3}
+.gift .lid:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:30px;transform:translateX(-50%);background:linear-gradient(90deg,var(--teal),var(--cyan),var(--teal))}
+.bow{position:absolute;left:50%;top:-40px;transform:translateX(-50%);width:110px;height:48px}
+.bow:before,.bow:after{content:"";position:absolute;bottom:0;width:52px;height:42px;border:9px solid var(--cyan);border-radius:50% 50% 8px 50%;box-shadow:0 0 16px rgba(151,245,255,.6)}
+.bow:before{left:0;transform:rotate(-18deg)}
+.bow:after{right:0;transform:scaleX(-1) rotate(-18deg)}
+.gift:not(.open){animation:wiggle 3.2s ease-in-out infinite}
+@keyframes wiggle{0%,78%,100%{transform:none}82%{transform:rotate(-4deg) translateY(-4px)}86%{transform:rotate(4deg) translateY(-6px)}90%{transform:rotate(-3deg)}94%{transform:rotate(2deg)}}
+.gift.open{transform:translateY(40px) scale(.7);opacity:.25}
+.gift.open .lid{transform:translate3d(60px,-260px,0) rotate(38deg);opacity:0}
+.beam{position:absolute;left:50%;bottom:120px;width:10px;height:10px;transform:translateX(-50%);border-radius:50%;background:var(--cyan);box-shadow:0 0 60px 30px rgba(151,245,255,.6),0 0 140px 80px rgba(45,212,180,.35);opacity:0;transition:all .9s}
+.gift.open~.beam{opacity:1;width:14px;height:14px}
+.tap{margin-top:34px;font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:var(--cyan);animation:blink 2s ease-in-out infinite}
+@keyframes blink{50%{opacity:.35}}
+.card{position:absolute;left:50%;bottom:0;width:min(420px,calc(100vw - 40px));transform:translate(-50%,40px) scale(.6);opacity:0;pointer-events:none;border-radius:24px;padding:30px 26px 28px;background:rgba(7,18,43,.86);backdrop-filter:blur(14px);border:1px solid rgba(151,245,255,.35);box-shadow:0 30px 80px -10px rgba(45,212,180,.35);transition:all 1s cubic-bezier(.2,1.3,.3,1) .5s;z-index:5}
+.card.show{transform:translate(-50%,0) scale(1);opacity:1;pointer-events:auto}
+.card img{width:170px;margin:0 auto 16px}
+.card h3{font-size:24px;font-weight:700;letter-spacing:-.02em}
+.card p{color:var(--mute);font-size:15px;line-height:1.6;margin-top:10px}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:22px;padding:16px 28px;border-radius:999px;background:linear-gradient(100deg,var(--cyan),var(--teal));color:#04111F;font-weight:700;text-decoration:none;font-size:15px;box-shadow:0 10px 30px -6px rgba(45,212,180,.6);transition:transform .25s}
+.btn:hover{transform:translateY(-2px) scale(1.03)}
+#fx{position:fixed;inset:0;width:100%;height:100%;z-index:4;pointer-events:none}
+footer{position:relative;z-index:1;text-align:center;padding:40px 20px 50px;color:var(--mute);font-size:12px;letter-spacing:.1em}
+footer img{height:30px;margin:0 auto 12px;opacity:.7}
+
+@media(max-width:600px){.track{gap:36px}.track img{height:40px}.stage{height:390px;margin-top:40px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.iso{clip-path:none;opacity:1}.w{opacity:1;transform:none;filter:none}}
+</style>
+</head>
+<body>
+<canvas id="bokeh"></canvas><div class="glow"></div>
+<main>
+  <section class="hero">
+    <img class="iso" src="/img/isotipo-grande.png" alt="">
+    <div class="big grad"><span class="n" id="n">21</span><small>años</small></div>
+    <h1 id="h1"><span class="w">Feliz</span> <span class="w">aniversario,</span><br><b class="w">Grupo</b> <b class="w">Leiden</b></h1>
+    <p class="sub rv">De 2005 a hoy, dos décadas convirtiendo ideas en marcas. Esto es un pequeño homenaje del equipo de Scalo.</p>
+    <div class="cue"><span>Bajá</span><i></i></div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow rv">La historia</div>
+      <h2 class="h2 rv d1">Veintiún años<br><b>no se improvisan.</b></h2>
+      <div class="tl" id="tl"><div class="bar" id="bar"></div>
+        <div class="hito rv"><div class="y">2005</div><h3>Nace Grupo Leiden</h3><p>Una agencia de diseño y comunicación armada por profesionales de distintas áreas, con una idea simple: soluciones concretas para lo que cada cliente necesita comunicar.</p></div>
+        <div class="hito rv"><div class="y">EL SALTO</div><h3 class="swap"><s>diseño y comunicación</s> <span class="grad">marketing estratégico</span></h3><p>La marca creció con el mercado: estrategia, datos, growth marketing y tecnología, sin perder el oficio del diseño que la vio nacer.</p></div>
+        <div class="hito rv"><div class="y">EL ECOSISTEMA</div><h3>Una familia de marcas</h3><p>Leiden Academy para enseñar lo que saben. Sales Team para que las empresas dejen de esperar oportunidades y empiecen a generarlas.</p>
+          <div style="display:flex;gap:26px;flex-wrap:wrap;align-items:center"><img class="marca" src="/img/leidenacademy.png" alt="Leiden Academy"><img class="marca" src="/img/logosalesteam.png" alt="Sales Team by Grupo Leiden" style="height:32px"></div></div>
+        <div class="hito rv"><div class="y">2026</div><h3>21 años y contando</h3><p>Marcas que crecieron con ustedes, clientes que los recomiendan y un equipo que sigue buscando la idea detrás de cada forma.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="eyebrow rv">En números</div>
+      <div class="stats">
+        <div class="stat rv"><b class="cnt" data-to="21">0</b><span>años de trayectoria</span></div>
+        <div class="stat rv d1"><b class="cnt" data-to="7670" data-sep="1">0</b><span>días de ideas, reuniones y entregas</span></div>
+        <div class="stat rv d2"><b class="cnt" data-to="8">0</b><span>áreas de servicio bajo una misma visión</span></div>
+        <div class="stat rv d3"><b class="cnt" data-to="3">0</b><span>marcas propias: Leiden, Academy y Sales Team</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap" style="text-align:center">
+      <div class="eyebrow rv">Las que confiaron</div>
+      <h2 class="h2 rv d1">Marcas que crecieron <b>con ustedes</b></h2>
+    </div>
+    <div class="marq rv"><div class="track" id="t1"></div></div>
+    <div class="marq r rv" style="margin-top:34px"><div class="track" id="t2"></div></div>
+  </section>
+
+  <section>
+    <div class="carta rv">
+      <div class="eyebrow">Unas palabras</div>
+      <p>Llegar a los 21 años en esta industria dice mucho. Dice que <b>hubo criterio</b> cuando todo cambiaba rápido, que <b>hubo equipo</b> cuando había que reinventarse, y que hay clientes que siguen eligiéndolos año tras año.</p>
+      <p>Para nosotros es un orgullo compartir camino con ustedes. <b>Gracias por la confianza, por hacer equipo y por abrirnos la puerta.</b> Que vengan muchos años más de ideas que se vuelven marcas.</p>
+      <div class="firma"><i></i>Todo el equipo de Scalo</div>
+    </div>
+  </section>
+
+  <section class="regalo" id="regalo">
+    <div class="eyebrow rv">Una cosa más</div>
+    <h2 class="h2 rv d1">Un aniversario<br><b>sin regalo no es aniversario.</b></h2>
+    <div class="stage">
+      <button class="gift" id="gift" aria-label="Abrir el regalo"><div class="box"></div><div class="lid"><div class="bow"></div></div></button>
+      <div class="beam"></div>
+      <div class="card" id="card">
+        <img src="/img/logo-blanco.png" alt="Grupo Leiden">
+        <h3>Un sitio nuevo para los próximos 21</h3>
+        <p>Les armamos una nueva versión de grupoleiden.com, con su marca, sus servicios y sus clientes, lista para recorrer.</p>
+        <a class="btn" href="/sitio/">Abrir mi regalo <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <div class="tap" id="tap">Tocá el regalo</div>
+  </section>
+</main>
+<canvas id="fx"></canvas>
+<footer><img src="/img/wordmark.png" alt="Grupo Leiden">Feliz aniversario · 2005 — 2026</footer>
+
+<script>
+document.documentElement.classList.add('js');
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches, MOB=innerWidth<700;
+
+/* marcas */
+const logos=[...Array(14)].map((_,i)=>`/img/clientes/c${i+1}.png`);
+const fill=(id,arr)=>{const h=arr.map(s=>`<img src="${s}" alt="" loading="lazy">`).join('');document.getElementById(id).innerHTML=h+h};
+fill('t1',logos.slice(0,7));fill('t2',logos.slice(7));
+
+/* bokeh, como el fondo del logo original */
+(()=>{const c=document.getElementById('bokeh'),x=c.getContext('2d');let W,H,D=Math.min(devicePixelRatio,2),P=[];
+ const cols=['151,245,255','45,212,180','255,255,255','120,200,255'];
+ function rs(){W=c.width=innerWidth*D;H=c.height=innerHeight*D;P=[...Array(MOB?45:90)].map(()=>mk(true))}
+ function mk(any){const r=(Math.random()**3*14+1.2)*D;return{x:Math.random()*W,y:any?Math.random()*H:H+20,r,v:(.08+Math.random()*.35)*D,a:Math.random()*.6+.15,t:Math.random()*6.28,c:cols[Math.random()*4|0]}}
+ function f(){x.clearRect(0,0,W,H);for(const p of P){p.y-=p.v;p.t+=.02;if(p.y<-30)Object.assign(p,mk(false));const al=p.a*(.6+.4*Math.sin(p.t));const g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);g.addColorStop(0,`rgba(${p.c},${al})`);g.addColorStop(.55,`rgba(${p.c},${al*.5})`);g.addColorStop(1,`rgba(${p.c},0)`);x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fill()}if(!RM)requestAnimationFrame(f)}
+ rs();addEventListener('resize',rs);f()})();
+
+/* hero */
+(()=>{const n=document.getElementById('n');if(!RM){let t0=null;const go=t=>{t0??=t;const k=Math.min((t-t0)/1800,1),e=1-Math.pow(1-k,4);n.textContent=Math.round(e*21);if(k<1)requestAnimationFrame(go)};setTimeout(()=>requestAnimationFrame(go),700)}
+ document.querySelectorAll('#h1 .w').forEach((w,i)=>setTimeout(()=>w.classList.add('on'),1500+i*(MOB?90:140)))})();
+
+/* reveals + contadores */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');io.unobserve(e.target);
+ e.target.querySelectorAll?.('.cnt').forEach(cnt)}),{threshold:.18,rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelector('.hero .rv').classList.add('in'),2100);
+function cnt(el){const to=+el.dataset.to,s=el.dataset.sep;let t0=null;const f=t=>{t0??=t;const k=Math.min((t-t0)/1600,1),v=Math.round((1-Math.pow(1-k,3))*to);el.textContent=s?v.toLocaleString('es-AR'):v;if(k<1)requestAnimationFrame(f)};requestAnimationFrame(f)}
+
+/* línea de tiempo que se llena con el scroll */
+(()=>{const tl=document.getElementById('tl'),bar=document.getElementById('bar');const up=()=>{const r=tl.getBoundingClientRect(),v=innerHeight*.6;bar.style.height=Math.max(0,Math.min(r.height-12,v-r.top))+'px'};addEventListener('scroll',up,{passive:true});up()})();
+
+/* regalo */
+(()=>{const g=document.getElementById('gift'),card=document.getElementById('card'),tap=document.getElementById('tap');
+ const c=document.getElementById('fx'),x=c.getContext('2d');let W,H,D=Math.min(devicePixelRatio,2),parts=[],run=false;
+ const rs=()=>{W=c.width=innerWidth*D;H=c.height=innerHeight*D};rs();addEventListener('resize',rs);
+ const cols=['#97F5FF','#2DD4B4','#FFFFFF','#2B7BFF','#FF5A1F','#C9FFF4'];
+ function burst(cx,cy,n,sp){for(let i=0;i<n;i++){const a=Math.random()*6.283,s=(Math.random()*sp+sp*.3)*D;parts.push({x:cx,y:cy,vx:Math.cos(a)*s,vy:Math.sin(a)*s,l:1,d:.008+Math.random()*.012,c:cols[Math.random()*cols.length|0],r:(Math.random()*2+1.4)*D,conf:false})}}
+ function confetti(n){for(let i=0;i<n;i++){parts.push({x:Math.random()*W,y:-20*D-Math.random()*H*.4,vx:(Math.random()-.5)*2*D,vy:(Math.random()*2+2)*D,l:1,d:.0035,c:cols[Math.random()*cols.length|0],r:(Math.random()*4+3)*D,conf:true,rot:Math.random()*6,vr:(Math.random()-.5)*.3})}}
+ function loop(){x.clearRect(0,0,W,H);x.globalCompositeOperation='lighter';
+  parts=parts.filter(p=>p.l>0&&p.y<H+40);
+  for(const p of parts){p.x+=p.vx;p.y+=p.vy;if(p.conf){p.vx*=.99;p.rot+=p.vr;x.globalCompositeOperation='source-over';x.save();x.translate(p.x,p.y);x.rotate(p.rot);x.globalAlpha=Math.min(1,p.l*1.5);x.fillStyle=p.c;x.fillRect(-p.r/2,-p.r/4,p.r,p.r/2);x.restore();x.globalCompositeOperation='lighter'}else{p.vx*=.975;p.vy=p.vy*.975+.05*D;x.globalAlpha=p.l;x.fillStyle=p.c;x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fill()}p.l-=p.d}
+  x.globalAlpha=1;if(parts.length)requestAnimationFrame(loop);else run=false}
+ function start(){if(!run){run=true;requestAnimationFrame(loop)}}
+ g.addEventListener('click',()=>{if(g.classList.contains('open'))return;g.classList.add('open');tap.style.visibility='hidden';
+  setTimeout(()=>{card.classList.add('show')},200);if(RM)return;
+  const r=g.getBoundingClientRect(),cx=(r.left+r.width/2)*D,cy=r.top*D;burst(cx,cy,MOB?110:180,7);confetti(MOB?90:160);start();
+  let k=0;const iv=setInterval(()=>{burst(Math.random()*W,Math.random()*H*.45+H*.05,MOB?50:80,5);start();if(++k>=(MOB?5:8))clearInterval(iv)},380)});
+})();
+</script>
+</body>
+</html>
